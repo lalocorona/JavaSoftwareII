@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportView">
+    <children>
+        <Button layoutX="720.0" layoutY="27.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+        <TableView fx:id="appointmentTable" layoutX="61.0" layoutY="138.0" prefHeight="206.0" prefWidth="713.0">
+         <columns>
+            <TableColumn fx:id="appointmentID" prefWidth="122.19999694824219" text="Appointment ID" />
+            <TableColumn fx:id="title" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="description" prefWidth="108.20001220703125" text="Description" />
+            <TableColumn fx:id="startDate" prefWidth="109.5999755859375" text="Start Date" />
+            <TableColumn fx:id="endDate" prefWidth="130.4000244140625" text="End Date" />
+            <TableColumn fx:id="customerID" prefWidth="90.20001220703125" text="Customer ID" />
+         </columns>
+        </TableView>
+      <Button layoutX="654.0" layoutY="27.0" mnemonicParsing="false" onAction="#backView" text="Back" />
+      <ComboBox fx:id="contactIDChoice" layoutX="641.0" layoutY="97.0" onAction="#setCustomerSchedule" prefHeight="26.0" prefWidth="133.0" />
+      <Label layoutX="61.0" layoutY="96.0" prefHeight="18.0" prefWidth="177.0" text="Customer Schedule">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="101.0" text="Select Contact" />
+      <Label layoutX="61.0" layoutY="12.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="386.0" prefHeight="28.0" prefWidth="277.0" text="Total Number Of Appointments">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="monthlyAppointment" layoutX="61.0" layoutY="457.0" onAction="#countMonthlyAppointments" prefHeight="26.0" prefWidth="133.0" />
+      <ComboBox fx:id="typeAppointments" layoutX="61.0" layoutY="541.0" onAction="#countTypeAppointments" prefHeight="26.0" prefWidth="133.0" />
+      <Label layoutX="61.0" layoutY="432.0" prefHeight="17.0" prefWidth="113.0" text="Select a month" />
+      <Label layoutX="61.0" layoutY="515.0" text="Select a type of appointment" />
+      <Label fx:id="count" layoutX="299.0" layoutY="462.0" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="321.0" text="Number of Appointments" />
+      <Label fx:id="typeCount" layoutX="290.0" layoutY="546.0" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="321.0" text="Number of Appointments" />
+      <Label layoutX="56.0" layoutY="604.0" prefHeight="28.0" prefWidth="386.0" text="Total Number Of Customers in Each Country">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="countryList" layoutX="61.0" layoutY="675.0" onAction="#countryCount" prefHeight="26.0" prefWidth="133.0" />
+      <Label layoutX="61.0" layoutY="643.0" prefHeight="17.0" prefWidth="92.0" text="Select a country" />
+      <Label fx:id="countryCount" layoutX="282.0" layoutY="680.0" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="321.0" text="Number of Appointments" />
+    </children>
+</AnchorPane>

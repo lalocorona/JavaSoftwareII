@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentView">
+   <children>
+      <Button layoutX="1326.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <TableView fx:id="appointmentTable" layoutX="61.0" layoutY="106.0" prefHeight="397.0" prefWidth="1257.0">
+        <columns>
+          <TableColumn fx:id="appointmentID" prefWidth="105.19999694824219" text="Appointment ID" />
+          <TableColumn fx:id="title" prefWidth="93.0" text="Title" />
+            <TableColumn fx:id="description" prefWidth="97.0" text="Description" />
+            <TableColumn fx:id="location" prefWidth="107.0" text="Location" />
+            <TableColumn fx:id="type" prefWidth="119.0" text="Type" />
+            <TableColumn fx:id="startTime" prefWidth="208.0" text="Start Time" />
+            <TableColumn fx:id="endTime" prefWidth="145.0" text="End Time" />
+            <TableColumn fx:id="customerID" prefWidth="151.0" text="Customer ID" />
+            <TableColumn fx:id="contactID" prefWidth="107.0" text="Contact ID" />
+            <TableColumn fx:id="userID" prefWidth="123.0" text="User ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="993.0" layoutY="56.0" mnemonicParsing="false" onAction="#customerScreen" text="View Costumers" />
+      <Button layoutX="61.0" layoutY="56.0" mnemonicParsing="false" onAction="#newAppointment" text="New Appointment" />
+      <Button layoutX="202.0" layoutY="56.0" mnemonicParsing="false" onAction="#updateAppointment" text="Update Appointment" />
+      <Button layoutX="353.0" layoutY="56.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete Appointment" />
+      <RadioButton fx:id="weeklyApp" layoutX="551.0" layoutY="60.0" mnemonicParsing="false" onAction="#loadWeeklyAppointments" text="Appointment By Week" />
+      <RadioButton fx:id="monthlyApp" layoutX="722.0" layoutY="60.0" mnemonicParsing="false" onAction="#loadMonthlyAppointments" text="Appointment By Month" />
+      <Button layoutX="1156.0" layoutY="56.0" mnemonicParsing="false" onAction="#loadReports" text="Reports" />
+   </children>
+</AnchorPane>
